@@ -1,7 +1,5 @@
 package com.hackathon.bbvAforo.dto;
 
-import java.math.BigDecimal;
-
 public class Oficina {
     private int id;
     private String nombre;
@@ -11,13 +9,14 @@ public class Oficina {
     private int idPais;
     private int aforoTotal;
     private int aforoActual;
-    private BigDecimal latOficina;
-    private BigDecimal longOficina;
+    private double latitud;
+    private double longitud;
 
     public Oficina() {
     }
 
-    public Oficina(int id, String nombre, String direccion, int idEstado, int idProvincia, int idPais, int aforoTotal, int aforoActual, BigDecimal latOficina, BigDecimal longOficina) {
+    public Oficina(int id, String nombre, String direccion, int idEstado, int idProvincia, int idPais, int aforoTotal, int aforoActual, double latitud,
+                  double longitud) {
         this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -26,8 +25,8 @@ public class Oficina {
         this.idPais = idPais;
         this.aforoTotal = aforoTotal;
         this.aforoActual = aforoActual;
-        this.latOficina = latOficina;
-        this.longOficina = longOficina;
+        this.latitud = latitud;
+        this.longitud = longitud;
     }
 
     public int getId() {
@@ -93,20 +92,20 @@ public class Oficina {
     public void setAforoActual(int aforoActual) {
         this.aforoActual = aforoActual;
     }
-
-    public BigDecimal getLatOficina() {
-        return latOficina;
+    
+     public void getLatitud() {
+        return latitud;
     }
-
-    public void setLatOficina(BigDecimal latOficina) {
-        this.latOficina = latOficina;
+    
+    public void setLatitud(double latitud) {
+        this.latitud = latitud;
     }
-
-    public BigDecimal getLongOficina() {
-        return longOficina;
+    
+    public void getLongitud(){
+        return longitud;
     }
-
-    public void setLongOficina(BigDecimal longOficina) {
-        this.longOficina = longOficina;
+    
+    public void setLongitud(double longitud){
+        this.longitud = longitud;
     }
 }
